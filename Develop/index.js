@@ -162,7 +162,17 @@ const questions = [
 // }
 
 // TODO: Create a function to initialize app
-function init() {}
+// function init() {
+//     inquirer.prompt(questions)
+//     .then((inquirerResponse, data) => {   
+//         console.log("Making ReadMe");
+//         fs.writeFileSync("README.md", inquirerResponse, data);
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     })
 
-// Function call to initialize app
-init();
+// }
+
+// // Function call to initialize app
+// init();
