@@ -104,14 +104,6 @@ const questions = [
         message: 'Choose your License:',
         name: 'license',
         choices: ['Apache', 'BSD 2-CLAUSE-Simplified', 'Creative Commons Zero', 'MIT', 'Mozilla' ],
-        validate: nameInput => {
-            if (nameInput) {
-              return true;
-            } else {
-              console.log('You must choose a license.');
-              return false;
-            }
-        }
     },
     {
         type: 'input',
