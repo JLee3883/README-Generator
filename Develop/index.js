@@ -1,23 +1,24 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const createReadMe = require("./readmetext");
 
 // TODO: Create an array of questions for user input
 const questions = [
-    inquirer
-  .prompt([
+  // inquirer
+  // .prompt([
     {
         type: 'input',
         message: 'What is the title of your project?',
         name: 'title',
-        validate: nameInput => {
-            if (nameInput) {
-              return true;
-            } else {
-              console.log('You must enter the title of your project.');
-              return false;
-            }
-        }
+        // validate: nameInput => {
+        //     if (nameInput) {
+        //       return true;
+        //     } else {
+        //       console.log('You must enter the title of your project.');
+        //       return false;
+        //     }
+        // }
     },
     {
         type: 'input',
@@ -32,20 +33,20 @@ const questions = [
             }
         }
     },
-    {
-        type: 'list',
-        message: 'Choose your Table of Contents:',
-        name: 'table',
-        choices: ['Installation', 'Usage', 'Contributing', 'Tests', 'Questions', 'License' ],
-        validate: nameInput => {
-            if (nameInput) {
-              return true;
-            } else {
-              console.log('You must enter the title of your project.');
-              return false;
-            }
-        }
-    },
+    // { HARDCODE THE TABLE OF CONTENTS INTO THE README TEXT-----------
+    //     type: 'checkbox',
+    //     message: 'Choose your Table of Contents:',
+    //     name: 'table',
+    //     choices: ['Installation', 'Usage', 'Contributing', 'Tests', 'Questions', 'License' ],
+    //     validate: nameInput => {
+    //         if (nameInput) {
+    //           return true;
+    //         } else {
+    //           console.log('You must enter the title of your project.');
+    //           return false;
+    //         }
+    //     }
+    // },
     {
         type: 'input',
         message: 'Enter the Installation Instructions',
@@ -99,7 +100,7 @@ const questions = [
         }
     },
     {
-        type: 'checkbox',
+        type: 'list',
         message: 'Choose your License:',
         name: 'license',
         choices: ['Apache', 'BSD 2-CLAUSE-Simplified', 'Creative Commons Zero', 'MIT', 'Mozilla' ],
@@ -151,28 +152,28 @@ const questions = [
             }
         }
     },
-  ])
+  // ])
 ];
 
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-    fs.writeFile(fileName. data, err => {
-        err ? console.log(err) : console.log('Success!')
-    })
-// }
 
 // TODO: Create a function to initialize app
 // function init() {
-//     inquirer.prompt(questions)
-//     .then((inquirerResponse, data) => {   
-//         console.log("Making ReadMe");
-//         fs.writeFileSync("README.md", inquirerResponse, data);
-//     })
-//     .catch((err) => {
-//         console.log(err);
-//     })
-
-// }
-
+  inquirer.prompt(questions)
+  .then((responses) => {  
+  //   const finishedReadMe = createReadMe(responses); 
+  //   console.log("Making ReadMe");
+  //   fs.writeFileSync("README.md", finishedReadMe);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+  
+  // }
+  
+  
 // // Function call to initialize app
 // init();
+
+//put in another js file thats like a readmetext.js and this will be the template liter
+//have to send it responses. make a function that plugs all the responses in there.
+//in the second file, module.export a function that taks in the repsonsses, fills out the read me and returns the readme back to where i called it
