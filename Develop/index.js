@@ -157,9 +157,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName. data, error => {
-        if (error) {
-            return console.log('There was an error: ' + error);
-        }
+        err ? console.log(err) : console.log('Success!')
     })
 }
 
