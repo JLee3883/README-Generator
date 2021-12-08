@@ -42,6 +42,27 @@ const questions = [
         message: 'Enter the Test Instructions',
         name: 'test',
     },
+    {
+        type: 'list',
+        message: 'Choose your License:',
+        name: 'license',
+        choices: ['Apache', 'BSD 2-CLAUSE-Simplified', 'Creative Commons Zero', 'MIT', 'Mozilla' ],
+    },
+    {
+        type: 'input',
+        message: 'Enter your GitHub username',
+        name: 'username',
+    },
+    {
+        type: 'input',
+        message: 'Enter your email address',
+        name: 'email',
+    },
+    {
+        type: 'input',
+        message: 'Enter the instructions for additional questions',
+        name: 'additional',
+    },
   ])
 ];
 
