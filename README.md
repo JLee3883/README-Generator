@@ -1,9 +1,9 @@
 
-# test
-[![License: MIT](https://img.shields.io/badge/License-BSD_2--Clause-yellow.svg)](https://opensource.org/licenses/MIT)
+# title
+[![License: MIT](https://img.shields.io/badge/License-CC0_1.0-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description 
-des
+desc
 
 ## Table of Contents
   - [Description](#description)
@@ -15,26 +15,27 @@ des
   - [Questions](#questions)
 
 ## Installation Instructions
-inst
+instruc
 
 ## Usage Information
-info
+use
 
 ## License
 
-This application is covered under the BSD_2--Clause license.
+his application is covered under the CC0_1.0 license.
+
 
 ## Contribution Guideline
-if
+guide
 
 ## Test Instructions
-di
+test
 
 
 ## Questions
-[My GitHub Page](https://github.com/f)
+[My GitHub Page](https://github.com/jenn)
 
-Email: s
+Email: jenn
 
-d
+none
 
