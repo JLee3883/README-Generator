@@ -8,48 +8,49 @@ function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {}//return different texts. if and else statements
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-  # ${data.title}
-  [![License: MIT](https://img.shields.io/badge/License-${data.license}-yellow.svg)](https://opensource.org/licenses/MIT)
+# ${data.title}
+[![License: MIT](https://img.shields.io/badge/License-${data.license}-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  ## Description 
-  ${data.description}
+## Description 
+${data.description}
 
-  ## Table of Contents
-   - [Description](#description)
-   - [Installation Instructions](#installation-instructions)
-   - [Usage Information](#usage-information)
-   - [License](#license)
-   - [Contribution Guideline](#contribution-guideline)
-   - [Test Instructions](#test-instructions)
-   - [Questions](#questions)
+## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage Information](#usage-information)
+  - [License](#license)
+  - [Contribution Guideline](#contribution-guideline)
+  - [Test Instructions](#test-instructions)
+  - [Questions](#questions)
 
-  ## Installation Instructions
-  ${data.installation}
+## Installation Instructions
+${data.installation}
 
-  ## Usage Information
-  ${data.usage}
-  
-  ## License
-  This application is covered by the ${data.license} license. 
+## Usage Information
+${data.usage}
 
-  ## Contribution Guideline
-  ${data.contribution}
-
-  ## Test Instructions
-  ${data.test}
+## License
+This application is covered by the ${data.license} license. //renderlicensesection(data.license)
 
 
-  ## Questions
-  [My GitHub Page](https://github.com/${data.username})
-  
-  Email: ${data.email}
-  
-  ${data.additional}
+## Contribution Guideline
+${data.contribution}
+
+## Test Instructions
+${data.test}
+
+
+## Questions
+[My GitHub Page](https://github.com/${data.username})
+
+Email: ${data.email}
+
+${data.additional}
 
 `;
 }
