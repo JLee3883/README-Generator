@@ -12,7 +12,15 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
+  # ${data.title}
+  [![License: MIT](https://img.shields.io/badge/License-${data.license}-yellow.svg)](https://opensource.org/licenses/MIT)
+
+  ## Description 
+  ${data.description}
+
+  
+
 
 `;
 }
@@ -20,13 +28,5 @@ function generateMarkdown(data) {
 module.exports = generateMarkdown;
 
 
-//export the function
-// module.exports = responses => {
-//   const readMe = `
-  
-  
-  
-  
-//   `
-//   return readMe;
-//   }
+
+//badge - use a web link to get that badge when license is selected. the address to that badge will need a variable. badge link is something-domain-badges-MIT

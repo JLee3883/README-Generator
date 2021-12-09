@@ -104,7 +104,7 @@ const questions = [
         type: 'list',
         message: 'Choose your License:',
         name: 'license',
-        choices: ['Apache', 'BSD 2-CLAUSE-Simplified', 'Creative Commons Zero', 'MIT', 'Mozilla' ],
+        choices: ['Apache_2.0', 'BSD_2--Clause', 'CC0_1.0', 'MIT', 'MPL_2.0' ],
     },
     {
         type: 'input',
