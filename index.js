@@ -108,6 +108,19 @@ const questions = [
     },
     {
         type: 'input',
+        message: 'Enter the instructions for additional questions',
+        name: 'additional',
+        validate: nameInput => {
+            if (nameInput) {
+              return true;
+            } else {
+              console.log('You must enter the instructions for additional questions.');
+              return false;
+            }
+        }
+    },
+    {
+        type: 'input',
         message: 'Enter your GitHub username',
         name: 'username',
         validate: nameInput => {
@@ -128,19 +141,6 @@ const questions = [
               return true;
             } else {
               console.log('You must enter your email address.');
-              return false;
-            }
-        }
-    },
-    {
-        type: 'input',
-        message: 'Enter the instructions for additional questions',
-        name: 'additional',
-        validate: nameInput => {
-            if (nameInput) {
-              return true;
-            } else {
-              console.log('You must enter the instructions for additional questions.');
               return false;
             }
         }

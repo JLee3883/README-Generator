@@ -19,14 +19,33 @@ function generateMarkdown(data) {
   ## Description 
   ${data.description}
 
-  
+  ## Table of Contents
+  ${data.table} 
 
+  ## Installation Instructions
+  ${data.installation}
+
+  ## Usage Information
+  ${data.usage}
+
+  ## Contribution Guidelines
+  ${data.contribution}
+
+  ## Test Instructions
+  ${data.test}
+
+  ## License
+  [![License: MIT](https://img.shields.io/badge/License-${data.license}-yellow.svg)](https://opensource.org/licenses/MIT)
+
+  ## Instructions for Additional Questions
+  ${data.additional}
+
+
+  ## Contact
+  GitHub: ${data.username}
+  Email: ${data.email}
 
 `;
 }
 
 module.exports = generateMarkdown;
-
-
-
-//badge - use a web link to get that badge when license is selected. the address to that badge will need a variable. badge link is something-domain-badges-MIT
