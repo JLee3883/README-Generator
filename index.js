@@ -1,25 +1,23 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require("./utils/generateMarkdown");
-const { report } = require('process');
+// const { report } = require('process');
 
-// TODO: Create an array of questions for user input
+// Questions for user input
 const questions = [
-  // inquirer
-  // .prompt([
     {
         type: 'input',
         message: 'What is the title of your project?',
         name: 'title',
-        // validate: nameInput => {
-        //     if (nameInput) {
-        //       return true;
-        //     } else {
-        //       console.log('You must enter the title of your project.');
-        //       return false;
-        //     }
-        // }
+        validate: nameInput => {
+            if (nameInput) {
+              return true;
+            } else {
+              console.log('You must enter the title of your project.');
+              return false;
+            }
+        }
     },
     {
         type: 'input',
@@ -34,20 +32,6 @@ const questions = [
             }
         }
     },
-    // { HARDCODE THE TABLE OF CONTENTS INTO THE README TEXT-----------
-    //     type: 'checkbox',
-    //     message: 'Choose your Table of Contents:',
-    //     name: 'table',
-    //     choices: ['Installation', 'Usage', 'Contributing', 'Tests', 'Questions', 'License' ],
-    //     validate: nameInput => {
-    //         if (nameInput) {
-    //           return true;
-    //         } else {
-    //           console.log('You must enter the title of your project.');
-    //           return false;
-    //         }
-    //     }
-    // },
     {
         type: 'input',
         message: 'Enter the Installation Instructions: ',
@@ -145,11 +129,10 @@ const questions = [
             }
         }
     },
-  // ])
 ];
 
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
   inquirer.prompt(questions)
   .then((responses) => {  
@@ -162,12 +145,8 @@ function init() {
     console.log(err);
   })
   
-  }
+}
   
   
-// // Function call to initialize app
+// Function call to initialize app
 init();
-
-//put in another js file thats like a readmetext.js and this will be the template liter
-//have to send it responses. make a function that plugs all the responses in there.
-//in the second file, module.export a function that taks in the repsonsses, fills out the read me and returns the readme back to where i called it
