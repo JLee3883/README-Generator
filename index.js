@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const createReadMe = require("./readmetext");
+const generateMarkdown = require("./utils/generateMarkdown");
+const { report } = require('process');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -149,22 +150,23 @@ const questions = [
 
 
 // TODO: Create a function to initialize app
-// function init() {
+function init() {
   inquirer.prompt(questions)
   .then((responses) => {  
-  //   const finishedReadMe = createReadMe(responses); 
-  //   console.log("Making ReadMe");
-  //   fs.writeFileSync("README.md", finishedReadMe);
+    const finishedReadMe = generateMarkdown(responses); 
+    console.log("Making ReadMe");
+    console.log(finishedReadMe);
+    fs.writeFileSync("README.md", finishedReadMe);
   })
   .catch((err) => {
     console.log(err);
   })
   
-  // }
+  }
   
   
 // // Function call to initialize app
-// init();
+init();
 
 //put in another js file thats like a readmetext.js and this will be the template liter
 //have to send it responses. make a function that plugs all the responses in there.

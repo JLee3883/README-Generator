@@ -18,3 +18,15 @@ function generateMarkdown(data) {
 }
 
 module.exports = generateMarkdown;
+
+
+//export the function
+// module.exports = responses => {
+//   const readMe = `
+  
+  
+  
+  
+//   `
+//   return readMe;
+//   }
