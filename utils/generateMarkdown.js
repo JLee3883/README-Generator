@@ -27,6 +27,9 @@ function generateMarkdown(data) {
 
   ## Usage Information
   ${data.usage}
+  
+  ## License
+  [![License: MIT](https://img.shields.io/badge/License-${data.license}-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Contribution Guidelines
   ${data.contribution}
@@ -34,17 +37,14 @@ function generateMarkdown(data) {
   ## Test Instructions
   ${data.test}
 
-  ## License
-  [![License: MIT](https://img.shields.io/badge/License-${data.license}-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  ## Instructions for Additional Questions
-  ${data.additional}
-
-
-  ## Contact
-  GitHub: ${data.username}
+  ## Questions
+  [My GitHub Page](https://github.com/${data.username})
+  
   Email: ${data.email}
-
+  
+  ${data.additional}
+  
 `;
 }
 
