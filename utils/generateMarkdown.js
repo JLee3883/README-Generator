@@ -20,7 +20,13 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-  ${data.table} 
+   - [Description](#description)
+   - [Installation Instructions](#installation-instructions)
+   - [Usage Information](#usage-information)
+   - [License](#license)
+   - [Contribution Guideline](#contribution-guideline)
+   - [Test Instructions](#test-instructions)
+   - [Questions](#questions)
 
   ## Installation Instructions
   ${data.installation}
@@ -29,9 +35,9 @@ function generateMarkdown(data) {
   ${data.usage}
   
   ## License
-  [![License: MIT](https://img.shields.io/badge/License-${data.license}-yellow.svg)](https://opensource.org/licenses/MIT)
+  This application is covered by the ${data.license} license. 
 
-  ## Contribution Guidelines
+  ## Contribution Guideline
   ${data.contribution}
 
   ## Test Instructions
@@ -44,7 +50,7 @@ function generateMarkdown(data) {
   Email: ${data.email}
   
   ${data.additional}
-  
+
 `;
 }
 
