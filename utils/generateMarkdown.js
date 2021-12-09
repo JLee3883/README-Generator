@@ -1,4 +1,4 @@
-
+// Function that contains the hardcode to generate the markdown
 function generateMarkdown(data) {
   return `
 # ${data.title}
